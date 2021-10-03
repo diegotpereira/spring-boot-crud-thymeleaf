@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Editar</th>
+        </tr>
+        <tr th:each="pessoaFisica : ${pessoaFisicas}">
+            <td><a th:href="@{/pessoaFisicas/{pessoaFisicaId}(pessoaFisicaId=${pessoaFisica.id})}" th:utext="${pessoaFisica.id}">...</a></td>
+            <td><a th:href="@{/pessoaFisicas/{pessoaFisicaId}(pessoaFisicaId=${pessoaFisica.id})}" th:utext="${pessoaFisica.nome}">...</a></td>
+            <td th:utext="${pessoaFisica.telefone}">...</td>
+            <td th:utext="${pessoaFisica.email}">...</td>
+            <td><a th:href="@{/pessoaFisicas/{pessoaFisicaId}/editar(pessoaFisicaId=${pessoaFisica.id})}">Editar</a></td>"
+        </tr>
+    </table>
+</body>
+</html>
