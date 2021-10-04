@@ -16,12 +16,12 @@ public class pessoaFisicaControle {
     @Autowired
     private pessoaFisicaServico pessoafisicaservico;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/pessoaFisica")
     public String buscarPF(Model model) {
         List<pessoaFisica> pessoaFisicas =  pessoafisicaservico.buscarTodos();
 
         model.addAttribute("pessoaFisicas", pessoaFisicas);
 
-        return "index";
+        return "lista-pessoa-fisica";
     }
 }
