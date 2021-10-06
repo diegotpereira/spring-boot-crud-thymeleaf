@@ -2,8 +2,8 @@ package br.com.java.springbootcrudthymeleaf.repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.java.springbootcrudthymeleaf.entidade.pessoaJuridica;
+import br.com.java.springbootcrudthymeleaf.entidade.PessoaJuridica;
 
-public interface pessoaJuridicaRepositorio extends JpaRepository<pessoaJuridica, Long> {
+public interface PessoaJuridicaRepositorio extends JpaRepository<PessoaJuridica, Long> {
     
 }

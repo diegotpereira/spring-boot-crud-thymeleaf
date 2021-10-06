@@ -6,28 +6,28 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.java.springbootcrudthymeleaf.entidade.pessoaFisica;
-import br.com.java.springbootcrudthymeleaf.repositorio.pessoaFisicaRepositorio;
-import br.com.java.springbootcrudthymeleaf.servico.pessoaFisicaServico;
+import br.com.java.springbootcrudthymeleaf.entidade.PessoaFisica;
+import br.com.java.springbootcrudthymeleaf.repositorio.PessoaFisicaRepositorio;
+import br.com.java.springbootcrudthymeleaf.servico.PessoaFisicaServico;
 
 @Service
-public class pessoaFisicaServicoImpl implements pessoaFisicaServico{
+public class PessoaFisicaServicoImpl implements PessoaFisicaServico{
 
     @Autowired
-    private pessoaFisicaRepositorio pessoafisicarepositorio;
+    private PessoaFisicaRepositorio pessoafisicarepositorio;
 
     @Override
-    public void salvar(pessoaFisica pessoafisica) {
+    public void salvar(PessoaFisica pessoaFisica) {
         // TODO Auto-generated method stub
-        pessoafisicarepositorio.save(pessoafisica);
+        pessoafisicarepositorio.save(pessoaFisica);
 
     }
 
     @Override
-    public List<pessoaFisica> buscarTodos() {
+    public List<PessoaFisica> buscarTodos() {
         // TODO Auto-generated method stub
-        List<pessoaFisica> pessoaFisicas = new ArrayList<>();
-        for(pessoaFisica pessoafisica : pessoafisicarepositorio.findAll()) {
+        List<PessoaFisica> pessoaFisicas = new ArrayList<>();
+        for(PessoaFisica pessoafisica : pessoafisicarepositorio.findAll()) {
 
             pessoaFisicas.add(pessoafisica);
         }
@@ -36,7 +36,7 @@ public class pessoaFisicaServicoImpl implements pessoaFisicaServico{
     }
 
     @Override
-    public pessoaFisica buscarPorId(int id) {
+    public PessoaFisica buscarPorId(int id) {
         // TODO Auto-generated method stub
         return null;
     }

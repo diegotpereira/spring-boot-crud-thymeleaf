@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table( name = "tb_pessoaFisica")
-public class pessoaFisica {
+public class PessoaFisica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,10 +39,10 @@ public class pessoaFisica {
     @Size(max = 50)
     private String endereco;
 
-    public pessoaFisica() {
+    public PessoaFisica() {
     }
 
-    public pessoaFisica(Long id, @NotBlank @Size(max = 100) String nome, @NotBlank Date datanascimento,
+    public PessoaFisica(Long id, @NotBlank @Size(max = 100) String nome, @NotBlank Date datanascimento,
             @NotBlank @Size(max = 15) String cpf,
             @Pattern(regexp = "^\\+?[0-9. ()-]{7,25}$", message = "Telefone número") @Size(max = 25) String telefone,
             @Email(message = "Endereço Email") @Size(max = 100) String email, @Size(max = 50) String endereco) {

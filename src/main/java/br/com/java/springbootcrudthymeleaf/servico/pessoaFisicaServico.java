@@ -2,12 +2,12 @@ package br.com.java.springbootcrudthymeleaf.servico;
 
 import java.util.List;
 
-import br.com.java.springbootcrudthymeleaf.entidade.pessoaFisica;
+import br.com.java.springbootcrudthymeleaf.entidade.PessoaFisica;
 
-public interface pessoaFisicaServico {
+public interface PessoaFisicaServico {
     
-    void salvar(pessoaFisica pessoafisica);
-    List<pessoaFisica> buscarTodos();
-    pessoaFisica buscarPorId(int id);
+    void salvar(PessoaFisica pessoaFisica);
+    List<PessoaFisica> buscarTodos();
+    PessoaFisica buscarPorId(int id);
     void deletarPorId(int id);
 }
